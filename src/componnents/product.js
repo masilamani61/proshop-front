@@ -1,6 +1,6 @@
 import { Card ,Image} from "react-bootstrap"
 import Rating from "./rating "
-import {Link} from 'react-router'
+import {Link} from 'react-router-dom'
 
 function Productcard({products}){
     return (<>

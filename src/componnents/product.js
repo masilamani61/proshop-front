@@ -4,7 +4,7 @@ import Rating from "./rating "
 function Productcard({products}){
     return (<>
     <Card className="my-3 p-3  rounded" fluid>
-        <a href={`https://prop-front.onrender.com//products/${products._id}`}>
+        <a href={`products/${products._id}`}>
             <Card.Img src={products.image} style={{objectFit:"cover",height:'30vh'}}/>
         </a>
       

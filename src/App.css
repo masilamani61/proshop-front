@@ -1,0 +1,8 @@
+.product-title{
+  height: 45px;
+  font-size: 15px;
+  text-overflow: ellipsis;
+}
+.items{
+  font-size: 15px;
+}

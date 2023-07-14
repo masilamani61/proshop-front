@@ -32,8 +32,11 @@ function Header(){
                     <Navbar.Collapse id='navbar-id'>
                         <Nav className='ms-auto'  >
                             <Search />
-                            <NavLink href='/cart' style={{width:'100px',color:'white',fontSize:'20px'}} ><FaShoppingCart/>cart
-                            { cartitem.length>0 &&                   <Badge pill>{cartitem.reduce((a,c)=>a+Number(c.quantity),0)}</Badge>}</NavLink>
+                            
+                            <NavLink  style={{width:'100px',color:'white',fontSize:'20px'}} >
+    <Link to='/cart'><FaShoppingCart/>cart
+                            { cartitem.length>0 &&                   <Badge pill>{cartitem.reduce((a,c)=>a+Number(c.quantity),0)}</Badge>}
+                                </Link></NavLink>
                             {userinfo?(<NavDropdown  style={{backgroundColor:'gray',color:'green',fontSize:'19px',borderRadius:'5px',marginRight:'10px'}}  title={userinfo.name} id='username'>
                             
                              <NavDropdown.Item>

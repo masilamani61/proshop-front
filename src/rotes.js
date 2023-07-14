@@ -29,7 +29,7 @@ return(
     <Route path='/payment/paypal/:id/' element={<PaypalForm/>}/>
     
     <Route path='/search/:keyword' element={<App/>}/>
-    <Route path='products/:id' element={<Productscreen/>}/>
+    <Route path='/products/:id' element={<Productscreen/>}/>
     <Route path='/cart' element={<Cartscreen/>}/>
     <Route path='/login' element={<Login/>}/>
     <Route path='/register' element={<Register/>}/>

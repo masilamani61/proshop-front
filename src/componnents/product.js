@@ -1,12 +1,13 @@
 import { Card ,Image} from "react-bootstrap"
 import Rating from "./rating "
+import {Link} from 'react-router'
 
 function Productcard({products}){
     return (<>
     <Card className="my-3 p-3  rounded" fluid>
-        <a href={`products/${products._id}`}>
+        <Link to={`products/${products._id}`}>
             <Card.Img src={products.image} style={{objectFit:"cover",height:'30vh'}}/>
-        </a>
+    </Link>
       
       
         <Card.Body>

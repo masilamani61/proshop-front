@@ -29,14 +29,21 @@ return(
     <Route path='/payment/paypal/:id/' element={<PaypalForm/>}/>
     
     <Route path='/search/:keyword' element={<App/>}/>
-  <Route path='/page/:pgenum/products/:id' element={<App/>}/>
+  <Route path='/page/:pgenum/products/:id' element={<Productscreen/>}/>
     <Route path='/products/:id' element={<Productscreen/>}/>
     <Route path='/cart' element={<Cartscreen/>}/>
+    <Route path='/page/:pgnum/cart' element={<Cartscreen/>}/>
+
+  
     <Route path='/login' element={<Login/>}/>
     <Route path='/register' element={<Register/>}/>
     <Route path='/payment' element={<Private><Payment/></Private>}/>
     <Route path='/placeorder' element={<Private><Placeorder/></Private>}/>
     <Route path='/placeorder/:id' element={<Private><Orderedpayment/></Private>}/>
+    <Route path='/page/:pgnum/payment' element={<Private><Payment/></Private>}/>
+    <Route path='/page/:pgnum/placeorder' element={<Private><Placeorder/></Private>}/>
+    <Route path='/page/:pgnum/placeorder/:id' element={<Private><Orderedpayment/></Private>}/>
+  
     <Route path='/allorders' element={<AdminRoute><Private><Adminorders/></Private></AdminRoute>}/>
   </Route>
   

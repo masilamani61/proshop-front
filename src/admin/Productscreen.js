@@ -7,6 +7,7 @@ import { useNavigate } from 'react-router'
 
 function ProductScreen() {
     const [product,setproduct]=useState([])
+    const [update,setupdate]=useState(false)
     const navigate=useNavigate()
     useEffect(()=>{
         const fetch=async()=>{
@@ -15,16 +16,16 @@ function ProductScreen() {
         setproduct(res.data)
 }
     fetch();
-},[])
+},[update])
     const handledelete=async(id)=>{
         console.log(id)
         const res1=await axios.delete('https://proapi.onrender.com/admin/product/'+id)
         if (res1){
-        window.location.reload()}
+        setupdate(!update)}
     }
     const productcreate=async()=>{
         const res1=axios.post('https://proapi.onrender.com/admin/product').then(
-            window.location.reload()
+            setupdate(true)
         )
 
 

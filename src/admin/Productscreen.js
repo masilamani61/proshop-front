@@ -25,7 +25,7 @@ function ProductScreen() {
     }
     const productcreate=async()=>{
         const res1=axios.post('https://proapi.onrender.com/admin/product').then(
-            setupdate(true)
+            setupdate(!update)
         )
 
 
